@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;            
+}  
+.cover {
+    height: 300px;
+    padding-top: 10px;
+}
+.cover-title {
+    color: #ffffff;
+    font-size: 2.5em; 
+    font-weight: 800;
+    text-align: center;
+}
+.post-container {
+    top: 40%;
+    left: 2.5%;  
+    width: 95%; 
+    position: absolute;
+    border-radius: 5px;
+    padding: 35px 0 70px;
+    box-shadow: 1px 1px 1px 1px #aaaaaa;
+        
+    background-color: white;         
+}
+.card-no-shadow {
+    box-shadow: none;
+}
+.card-image {
+    margin: 0;
+    border-radius: 3px;
+}
+.post-title {
+    margin-top: 10px; 
+    font-size: 1.8em;
+    color: #3C4858;
+    word-wrap: break-word;
+    font-weight: 700;
+}        
+.post-description {
+    color: #999999;
+    word-wrap: break-word;            
+    font-size: 1em;
+}
+.post-meta {
+    color: #888888;
+}
+.tags {
+    display: block;
+}
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+.icon-text {
+    line-height: 1.9em;
+}

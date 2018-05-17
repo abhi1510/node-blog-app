@@ -1,0 +1,76 @@
+<div class="cover amber darken-2">
+    <p class="cover-title">
+        Learn from Yesterday <br>
+        live for today, hope for tomorrow !
+    </p>
+</div>
+<div class="post-container">
+    <div class="row">
+        <div class="col s12 m8" ng-init="getPosts()">
+            <section class="card card-no-shadow col s12" ng-repeat="post in posts">
+                <div class="row">
+                    <div class="col s12 m5">
+                        <div class="card-image">
+                            <img class="z-depth-2" width="360" height="240" src="{{post.imageurl}}" alt="Unable to load image">
+                        </div>
+                    </div>
+                    <div class="col s12 m7">
+                        <h2 class="post-title">{{post.title}}</h2>
+                        <div class="post-meta">
+                            <span style="font-weight: 600">
+                                <i class="material-icons">person</i>
+                                <span class="icon-text">{{post.author}}</span>                                    
+                            </span> 
+                            <span style="font-weight: 500">
+                                <i class="material-icons">date_range</i>
+                                <span id="timeContainer" class="icon-text">
+                                    {{post._id | objToDate}}
+                                </span>                                    
+                            </span>
+                        </div> 
+                        <div class="post-description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repudiandae laboriosam optio repellendus labore maxime reprehenderit nisi cupiditate nobis ipsa.
+                                <a href="#posts/{{post._id}}" class="waves-effect waves-light btn-small">></a>
+                            </p>
+                        </div> 
+                        <span ng-repeat="tag in post.tags" class="chip">{{tag}}</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col s12 m3 offset-m1">
+            <section class="search-widget">                    
+                <div class="row">
+                    <form action="" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <input id="search" type="text" class="validate" style="border-bottom:1.5px solid #cac8c8;">
+                                <label for="search">Search the blog</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <button class="btn-floating btn-medium waves-effect waves-light teal">
+                                    <i class="material-icons left">search</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>                    
+            </section>  
+            <section class="media">
+                <h5 class="widget-title">Build a Chat App in Nodejs</h5>
+                <div style="width:100%">
+                    <iframe width="260" height="200"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+            </section>
+            <section class="recent-posts">  
+                <h5 class="widget-title">Recent Posts</h5>
+                <a href="">Awesome jQuery and JavaScript Plugins for Floating Form Labels</a>
+                <a href="">Popular Dataset repositories on web</a>
+                <a href="">JavaScript Plugins for Floating Form Labels</a>
+            </section>
+        </div>
+    </div>
+</div>

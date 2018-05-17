@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m2"></div>
+        <div class="col s12 m8 card">
+            <div class="card-content">
+                <form class="col s12" ng-submit="savePost()">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" ng-model="post.title" placeholder="Enter post title" required>
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="text" ng-model="post.author" placeholder="Enter author" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" ng-model="post.content"
+                                placeholder="Enetr post content" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">    
+                            <span ng-repeat="tag in tags">
+                                <span class="chip" style="cursor: pointer"
+                                    ng-click="addTag($index)" 
+                                    ng-class="{'teal': tag.isSelected}">{{tag.name}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">    
+                            <button type="reset" class="waves-effect waves-light btn red">Reset</button>
+                            <button type="submit" class="waves-effect waves-light btn">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col s12 m2"></div>
+    </div>
+</div>

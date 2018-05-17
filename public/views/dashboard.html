@@ -1,0 +1,37 @@
+<div class="container" style="width: 85%">
+    <div class="row">        
+        <div class="col s12">
+            <p style="margin-bottom: 2%"></p>
+            <a href="#createPost" 
+                class="waves-effect waves-light btn"
+                style="left:89%">Create Post</a>
+        </div>
+    </div>
+    <div class="card row" ng-init="getPosts()">
+        <div class="col s12">            
+            <table class="responsive-table centered highlight">
+                <thead>
+                    <tr class="teal-text">
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Created</th>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="post in posts" ng-click="postDetail(post._id)" style="cursor: pointer">
+                        <td>{{post._id}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post._id | objToDate}}</td>
+                        <td>{{post.author}}</td>
+                        <td>
+                            <a href="#editPost/{{post._id}}"><i class="material-icons">edit</i></a>
+                            <a href="#deletePost/{{post._id}}"><i class="material-icons red-text">delete</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>
+</div>

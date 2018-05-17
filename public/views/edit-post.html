@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card row">        
+        <div class="col s12">
+            <div class="card-content" ng-init="getPostDetail()">
+                <span class="card-title teal-text">
+                    Update Post
+                </span>
+
+                <form class="col s12" ng-submit="updatePost()">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" ng-model="post.title">
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="text" ng-model="post.author" placeholder="Enter author" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" ng-model="post.content"
+                                placeholder="Enetr post content" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">    
+                            <span ng-repeat="tag in post.tags">
+                                <span class="chip" style="cursor: pointer"
+                                    ng-click="addTag($index)" 
+                                    ng-class="{'teal': tag.isSelected}">{{tag}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">    
+                            <button class="waves-effect waves-light btn" ng-click="cancelDelete()">Cancel</button>
+                            <button class="waves-effect waves-light btn purple">Update</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                
+            </div>
+        </div>
+    </div>
+</div>
